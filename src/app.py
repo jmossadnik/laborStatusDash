@@ -23,6 +23,9 @@ recession_periods = [("1990-07-01", "1991-03-01"), ("2001-03-01", "2001-11-01"),
 
 app = dash.Dash(__name__)
 
+# Declare server for Render deployment. Needed for Procfile.
+server = app.server
+
 # Define the app layout
 app.layout = html.Div([
     html.H1("Labor Market Timeseries Dashboard"),
