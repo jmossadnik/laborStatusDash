@@ -4,7 +4,6 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import pandas as pd
 import plotly.express as px
-from stl_adjust import STL_adjust
 import pathlib
 
 path = pathlib.Path(__file__).parent.resolve()
