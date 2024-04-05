@@ -4,12 +4,9 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import pandas as pd
 import plotly.express as px
-import pathlib
-
-path = pathlib.Path(__file__).parent.resolve()
 
 # Load your data from "dta.csv"
-df = pd.read_csv(r"{}/dta.csv".format(path))
+df = pd.read_csv('dta.csv')
 df = df[df.year >= 1988] # missing months in 1985; hard to impute because it is the beginning
                          # of the timeseries, hence I cut the data for displaying
 
